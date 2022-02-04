@@ -5,7 +5,7 @@ FROM node:lts
 WORKDIR /mywebsite
 
 #Required stack
-COPY ./ /mywebsite
+COPY . /mywebsite
 
 RUN yarn install
 

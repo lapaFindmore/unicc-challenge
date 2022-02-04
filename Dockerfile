@@ -2,10 +2,14 @@
 FROM node:lts
 
 #Optional:give the mantainer
-WORKDIR /mywebsite
+WORKDIR /docusaurus
 
 #Required stack
-COPY ./mywebsite /var/lib/docker/tmp/docker-builder391552912/mywebsite
+
+#COPY ./mywebsite/sidebars.js /mywebsite/sidebars.js
+#COPY ./mywebsite/src/css/custom.css /mywebsite/src/css/custom.css
+#COPY ./mywebsite/docusaurus.config.js /mywebsite/yarn/docusaurus.config.js
+COPY ./docusaurus /docusaurus
 
 RUN yarn install
 

@@ -5,7 +5,7 @@ FROM node:lts
 WORKDIR /mywebsite
 
 #Required stack
-COPY ./docusaurus.config.js /mywebsite/yarn/docusaurus.config.js
+COPY docusaurus.config.js /mywebsite/yarn/docusaurus.config.js
 COPY . /mywebsite
 
 RUN yarn install

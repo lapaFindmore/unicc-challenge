@@ -5,7 +5,7 @@ FROM node:lts
 WORKDIR /mywebsite
 
 #Required stack
-COPY ./mywebsite /var/lib/docker/tmp/docker-builder391552912/mywebsite
+#COPY ./mywebsite /mywebsite
 
 RUN yarn install
 

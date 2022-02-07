@@ -11,4 +11,4 @@ WORKDIR mywebsite
 RUN yarn install
 RUN yarn run build
 
-CMD yarn run serve 
+CMD yarn run serve -h 0.0.0.0 -p $PORT

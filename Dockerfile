@@ -1,13 +1,14 @@
 #Getting base image nodeja
 FROM node:lts
-
 #Optional:give the mantainer
-WORKDIR /mywebsite
 
 #Required stack
-COPY docusaurus.config.js /mywebsite/yarn/docusaurus.config.js
+COPY ./docusaurus.config.js /mywebsite/yarn/docusaurus.config.js
 COPY . /mywebsite
 
-RUN yarn install
+WORKDIR mywebsite
 
-ENTRYPOINT ["yarn", "run","serve","--build"]
+RUN yarn install
+RUN yarn run build
+
+CMD yarn run serve -h 0.0.0.0 -p $PORT

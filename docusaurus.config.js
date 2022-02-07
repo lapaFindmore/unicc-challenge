@@ -19,7 +19,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('/mywebsite/sidebars.js'),
+          sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/lapaFindmore/unicc-challenge',
         },
@@ -30,7 +30,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             'https://github.com/lapaFindmore/unicc-challenge',
         },
         theme: {
-          customCss: require.resolve('/mywebsite//src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
